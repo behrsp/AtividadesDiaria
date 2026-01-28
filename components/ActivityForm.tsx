@@ -135,6 +135,10 @@ const ActivityForm: React.FC<ActivityFormProps> = ({ onSave, editingActivity, on
           />
         </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:col-span-1">
+          {/* Espaçador */}
+        </div>
+
         <div>
           <label className={labelClass}>Início (Data e Hora) *</label>
           <input 
@@ -155,17 +159,6 @@ const ActivityForm: React.FC<ActivityFormProps> = ({ onSave, editingActivity, on
           />
         </div>
 
-        <div>
-          <label className={labelClass}>Solução</label>
-          <input 
-            className={inputClass} 
-            type="text" 
-            value={formData.solution}
-            onChange={e => setFormData({...formData, solution: e.target.value})}
-            placeholder="Como foi resolvido"
-          />
-        </div>
-
         <div className="md:col-span-2">
           <label className={labelClass}>Detalhes</label>
           <textarea 
@@ -173,6 +166,16 @@ const ActivityForm: React.FC<ActivityFormProps> = ({ onSave, editingActivity, on
             value={formData.details}
             onChange={e => setFormData({...formData, details: e.target.value})}
             placeholder="Descrição adicional..."
+          />
+        </div>
+
+        <div className="md:col-span-2">
+          <label className={labelClass}>Solução</label>
+          <textarea 
+            className={`${inputClass} h-24 resize-none`}
+            value={formData.solution}
+            onChange={e => setFormData({...formData, solution: e.target.value})}
+            placeholder="Como foi resolvido (Ações realizadas)..."
           />
         </div>
 
