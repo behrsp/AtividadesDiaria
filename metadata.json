@@ -1,0 +1,5 @@
+{
+  "name": "Gestor de Atividades Amarelo & Preto",
+  "description": "Sistema de gestão de atividades diárias com dashboard, cálculo de tempo e exportação para Excel, focado em setores corporativos.",
+  "requestFramePermissions": []
+}
